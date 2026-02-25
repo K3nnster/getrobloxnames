@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Roblox Name Generator – Cool, Aesthetic & Tryhard Usernames</title>
+
+  <meta name="description" content="Generate cool Roblox usernames instantly. Find aesthetic, tryhard, funny and unique Roblox display name ideas. Free Roblox name generator tool.">
+
+  <meta name="keywords" content="
+  Roblox name generator,
+  cool Roblox names,
+  Roblox username ideas,
+  aesthetic Roblox names,
+  tryhard Roblox names,
+  funny Roblox usernames,
+  Roblox display name ideas,
+  Roblox gamer tags,
+  unique Roblox names,
+  Roblox username generator free
+  ">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #111111, #1f1f1f);
+      color: white;
+      text-align: center;
+      padding: 30px;
+    }
+
+    h1 {
+      color: #ff2a2a;
+      font-size: 38px;
+    }
+
+    h2 {
+      color: #ff4d4d;
+      margin-top: 40px;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin: 8px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .main-btn {
+      background: #ff2a2a;
+      color: white;
+    }
+
+    .copy-btn {
+      background: white;
+      color: #ff2a2a;
+      font-size: 12px;
+      padding: 4px 8px;
+    }
+
+    .name-box {
+      margin: 10px auto;
+      padding: 12px;
+      background: #222;
+      border: 1px solid #ff2a2a;
+      border-radius: 6px;
+      width: 300px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .ad-space {
+      margin: 30px auto;
+      padding: 20px;
+      background: #333;
+      border: 2px dashed #ff2a2a;
+      width: 320px;
+    }
+
+    .content {
+      max-width: 800px;
+      margin: 40px auto;
+      text-align: left;
+      line-height: 1.6;
+    }
+
+    footer {
+      margin-top: 50px;
+      font-size: 12px;
+      color: #aaa;
+    }
+
+  </style>
+</head>
+
+<body>
+
+<h1>🔥 Roblox Name Generator 🔥</h1>
+<p>Generate cool, aesthetic & tryhard usernames instantly</p>
+
+<button class="main-btn" onclick="generateTen('cool')">Cool Names</button>
+<button class="main-btn" onclick="generateTen('aesthetic')">Aesthetic</button>
+<button class="main-btn" onclick="generateTen('tryhard')">Tryhard</button>
+<button class="main-btn" onclick="generateTen('funny')">Funny</button>
+
+<div id="results"></div>
+
+<div class="ad-space">
+  🔴 Ad Space (Insert Google AdSense Code Here)
+</div>
+
+<script>
+const categories = {
+  cool: ["Shadow","Blaze","Nova","Phantom","Vortex","Cyber","Omega","Venom"],
+  aesthetic: ["Lunar","Cloud","Angel","Soft","Velvet","Crystal","Moon","Star"],
+  tryhard: ["Xx","ZX","Pro","OnTop","FPS","Clutch","WZ","YT"],
+  funny: ["Potato","Banana","Noob","Oops","Chicken","Derp","Bacon","Goofy"]
+};
+
+const nouns = [
+"Ninja","Warrior","Dragon","Sniper","Gamer","Knight","Ghost",
+"Tiger","Samurai","Wizard","King","Beast","Angel","Raider",
+"Champion","Wolf","Shark","Titan","Hero","Bandit"
+];
+
+function randomItem(arr){
+  return arr[Math.floor(Math.random()*arr.length)];
+}
+
+function generateTen(type){
+  document.getElementById("results").innerHTML = "";
+
+  for(let i=0;i<10;i++){
+    let name = randomItem(categories[type]) + randomItem(nouns) + Math.floor(Math.random()*999);
+
+    const box = document.createElement("div");
+    box.className="name-box";
+
+    const text = document.createElement("span");
+    text.innerText = name;
+
+    const copyBtn = document.createElement("button");
+    copyBtn.innerText="Copy";
+    copyBtn.className="copy-btn";
+    copyBtn.onclick=function(){
+      navigator.clipboard.writeText(name);
+      copyBtn.innerText="Copied!";
+      setTimeout(()=>copyBtn.innerText="Copy",1500);
+    };
+
+    const checkBtn = document.createElement("button");
+    checkBtn.innerText="Check";
+    checkBtn.className="copy-btn";
+    checkBtn.onclick=function(){
+      window.open("https://www.roblox.com/", "_blank");
+    };
+
+    box.appendChild(text);
+    box.appendChild(copyBtn);
+    box.appendChild(checkBtn);
+
+    document.getElementById("results").appendChild(box);
+  }
+}
+</script>
+
+<div class="content">
+
+<h2>Cool Roblox Name Ideas</h2>
+<p>Finding the perfect Roblox username is important because it represents your identity in the game. A strong name can make you look more professional, competitive, or creative. Our Roblox name generator helps you instantly create unique usernames for gaming, streaming, or social play.</p>
+
+<h2>Aesthetic Roblox Display Names</h2>
+<p>Aesthetic names are soft, stylish, and visually pleasing. These names often include moon, angel, cloud, or dreamy inspired words. They are very popular among players who want a clean and trendy display name.</p>
+
+<h2>Tryhard Roblox Usernames</h2>
+<p>Tryhard names usually include competitive words, symbols, or short aggressive combinations. These names are common in FPS and PvP style Roblox games.</p>
+
+<h2>Funny Roblox Names</h2>
+<p>Funny usernames are great for casual players. Silly words, food names, and unexpected combinations make your character memorable and entertaining.</p>
+
+<h2>Frequently Asked Questions</h2>
+
+<p><strong>How do I change my Roblox username?</strong><br>
+You can change your username inside your account settings. Roblox may charge a fee for username changes.</p>
+
+<p><strong>What is the difference between a username and display name?</strong><br>
+Usernames are unique and permanent identifiers. Display names can be changed more often and are what other players mainly see.</p>
+
+<p><strong>Are these names guaranteed to be available?</strong><br>
+No. Always click the check button to verify availability directly on the Roblox website.</p>
+
+</div>
+
+<div class="ad-space">
+  🔴 Second Ad Placement Area
+</div>
+
+<footer>
+This website is not affiliated with Roblox Corporation. Roblox is a trademark of its respective owner.
+</footer>
+
+</body>
+</html>
